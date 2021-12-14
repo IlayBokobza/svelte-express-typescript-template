@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "scripts": {
+    "watch": "tsc -w",
+    "dev": "nodemon build/index -e js,ts",
+    "build": "tsc"
+  },
+  "main": "build/index.js",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/mongoose": "^5.11.97",
+    "cors": "^2.8.5"
+  }
+}
