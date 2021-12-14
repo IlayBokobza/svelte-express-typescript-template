@@ -1,5 +1,5 @@
 {
-  "name": "superb-bot",
+  "name": "svelte-express-typescript-template",
   "scripts": {
     "serve": "concurrently \"npm run watch --workspace=web\" \"npm run watch --workspace=server\"",
     "dev": "npm run dev --workspace=server",
