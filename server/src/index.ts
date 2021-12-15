@@ -14,9 +14,16 @@ mongoose.connect(process.env.MONGO!,{dbName:"Superb-Bot"})
 .then(() => console.log(chalk.bgGreen('Connected To Database')))
 .catch((e) => {console.log(chalk.bgRed('Unable to connect to database'),'\n',e.message);process.exit()})
 
-//test route
+//TODO: remove test route
 app.get('/api/hello',(req,res) => {
     res.send('Hello There!')
+})
+
+//serves app
+const pathToDist = path.resolve(__dirname,'../dist')
+app.use(express.static(pathToDist))
+app.get(/.*/,(req,res)=>{
+    res.sendFile(`${pathToDist}/index.html`)
 })
 
 //starts server
