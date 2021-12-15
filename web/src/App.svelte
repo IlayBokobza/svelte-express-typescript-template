@@ -3,8 +3,6 @@
 	import Home from './views/Home.svelte'
 	import About from './views/About.svelte'
 
-	export let url = "";
-
 	const routes = [
 		{
 			path:'/',
